@@ -113,9 +113,9 @@ export default function Home() {
               id="submitter-name-input"
             />
             <CustomButton
-              label={loading ? "Getting Explanation..." : "Explain Like I'm 5"}
+              label={isStreaming ? "Streaming Explanation..." : loading ? "Getting Explanation..." : "Explain Like I'm 5"}
               onClick={handleSubmit}
-              disabled={loading}
+              disabled={loading || isStreaming}
               className="w-full text-white py-3 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200"
             />
           </div>
